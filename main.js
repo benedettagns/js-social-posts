@@ -34,7 +34,7 @@ const arrayPost = [
         photo:'https://unsplash.it/300/300?image=',
         date:'01-11-2022',
         text:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut.',
-        image:'https://unsplash.it/600/300?image=171',
+        image:'',
         like:97,
     },
 ];
@@ -74,7 +74,7 @@ for (let i=0; i<arrayPost.length; i++) {
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${card.like}</b> persone
                     </div>
                 </div> 
             </div>            
@@ -89,5 +89,3 @@ document.addEventListener("click", function(){
     document.querySelector('.like-button__label').style.color ='red';
     
 });
-
-
