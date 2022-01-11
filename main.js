@@ -64,10 +64,30 @@ for (let i=0; i<arrayPost.length; i++) {
         <div class="post__text">${card.text}</div>
         <div class="post__image">
             <img src="${card.image}" alt="">
-        </div> `
+        </div> 
+        <div class="post__footer">
+                <div class="likes js-likes">
+                    <div class="likes__cta">
+                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                            <span class="like-button__label">Mi Piace</span>
+                        </a>
+                    </div>
+                    <div class="likes__counter">
+                        Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+                    </div>
+                </div> 
+            </div>            
+        </div>`
     console.log(card);
 };
 
 //Se clicchiamo sul tasto “Mi Piace” cambiamo il colore al testo del bottone 
 //e incrementiamo il counter dei likes relativo.
 //Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.
+document.addEventListener("click", function(){
+    document.querySelector('.like-button__label').style.color ='red';
+    
+});
+
+
